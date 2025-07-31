@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf export && mkdir export && npx rollup -c rollup.config.build.js && cp index.html export/ && cp -R assets export/"
+    "build": "rimraf docs && mkdir docs && npx rollup -c rollup.config.build.js && cp index.html docs/ && cp -R assets docs/"
   },
   "repository": {
     "type": "git",
