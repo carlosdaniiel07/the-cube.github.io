@@ -1,0 +1,24 @@
+{
+  "name": "bsehovac.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "rollup-plugin-babel-minify": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf export && mkdir export && npx rollup -c rollup.config.build.js && cp index.html export/ && cp -R assets export/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bsehovac/bsehovac.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bsehovac/bsehovac.github.io/issues"
+  },
+  "homepage": "https://github.com/bsehovac/bsehovac.github.io#readme"
+}
