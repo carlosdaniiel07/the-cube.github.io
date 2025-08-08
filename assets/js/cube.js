@@ -3094,7 +3094,8 @@
 	  init() {
 	    this.dom = {
 	      container: document.querySelector('.ui__color-palette'),
-	      colors: document.querySelectorAll('.color-palette__color')
+	      colors: document.querySelectorAll('.color-palette__color'),
+	      resetBtn: document.querySelector('.color-palette__reset-btn')
 	    };
 
 	    this.bindEvents();
@@ -3108,6 +3109,12 @@
 	        this.selectColor(colorKey);
 	      });
 	    });
+
+	    if (this.dom.resetBtn) {
+	      this.dom.resetBtn.addEventListener('click', () => {
+	        this.resetAllColors();
+	      });
+	    }
 	  }
 
 	  selectColor(colorKey) {
@@ -3149,6 +3156,28 @@
 	  reset() {
 	    this.selectedColor = null;
 	    this.dom.colors.forEach(btn => btn.classList.remove('active'));
+	  }
+
+	  resetAllColors() {
+	    // Cor cinza original do cubo
+	    const grayColor = 0x808080;
+	    
+	    // Reseta todas as faces do cubo para cinza
+	    const faces = ['U', 'D', 'F', 'R', 'B', 'L'];
+	    faces.forEach(faceName => {
+	      // Atualiza a cor no tema
+	      this.game.themes.colors[this.game.themes.theme][faceName] = grayColor;
+	    });
+	    
+	    // Aplica a cor cinza a TODAS as edges (não apenas uma de cada face)
+	    this.game.cube.edges.forEach(edge => {
+	      if (faces.includes(edge.name)) {
+	        edge.material.color.setHex(grayColor);
+	      }
+	    });
+
+	    // Remove seleção ativa da paleta
+	    this.reset();
 	  }
 	}
 

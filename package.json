@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf docs && mkdir docs && npx rollup -c rollup.config.build.js && cp index.html docs/ && cp -R assets docs/"
+    "build": "rimraf docs && mkdir docs && npx rollup -c rollup.config.build.js && cp index.html docs/ && cp -R assets docs/",
+    "build:clean": "rimraf docs"
   },
   "repository": {
     "type": "git",
