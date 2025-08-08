@@ -13,6 +13,13 @@ class Themes {
         L: 0x82ca38, // green
         P: 0x08101a, // piece
         G: 0xd1d5db, // background
+        // Custom colors
+        YELLOW: 0xFBE354, // Amarelo claro
+        GREEN: 0xC1DA79, // Verde claro
+        BLUE: 0x62B6E2, // Azul claro
+        WHITE: 0xE7E8F1, // Branco suave
+        PINK: 0xEC88B3, // Rosa
+        ORANGE: 0xEF865F, // Laranja suave
       },
       erno: {
         U: 0xffffff,
@@ -23,6 +30,13 @@ class Themes {
         L: 0x009e60,
         P: 0x08101a,
         G: 0x8abdff,
+        // Custom colors
+        YELLOW: 0xFBE354,
+        GREEN: 0xC1DA79,
+        BLUE: 0x62B6E2,
+        WHITE: 0xE7E8F1,
+        PINK: 0xEC88B3,
+        ORANGE: 0xEF865F,
       },
       dust: {
         U: 0xfff6eb,
@@ -33,6 +47,13 @@ class Themes {
         L: 0x849f5d,
         P: 0x08101a,
         G: 0xe7c48d,
+        // Custom colors
+        YELLOW: 0xFBE354,
+        GREEN: 0xC1DA79,
+        BLUE: 0x62B6E2,
+        WHITE: 0xE7E8F1,
+        PINK: 0xEC88B3,
+        ORANGE: 0xEF865F,
       },
       camo: {
         U: 0xfff6eb,
@@ -43,6 +64,13 @@ class Themes {
         L: 0x37431d,
         P: 0x08101a,
         G: 0xbfb672,
+        // Custom colors
+        YELLOW: 0xFBE354,
+        GREEN: 0xC1DA79,
+        BLUE: 0x62B6E2,
+        WHITE: 0xE7E8F1,
+        PINK: 0xEC88B3,
+        ORANGE: 0xEF865F,
       },
       rain: {
         U: 0xfafaff,
@@ -53,6 +81,13 @@ class Themes {
         L: 0xa3a947,
         P: 0x08101a,
         G: 0x87b9ac,
+        // Custom colors
+        YELLOW: 0xFBE354,
+        GREEN: 0xC1DA79,
+        BLUE: 0x62B6E2,
+        WHITE: 0xE7E8F1,
+        PINK: 0xEC88B3,
+        ORANGE: 0xEF865F,
       },
     };
 

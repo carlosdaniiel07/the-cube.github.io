@@ -454,6 +454,7 @@ body {
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .color-palette__color {
@@ -504,6 +505,30 @@ body {
 
 .color-palette__color--green {
   background: #82ca38;
+}
+
+.color-palette__color--custom-yellow {
+  background: #FBE354;
+}
+
+.color-palette__color--custom-green {
+  background: #C1DA79;
+}
+
+.color-palette__color--custom-blue {
+  background: #62B6E2;
+}
+
+.color-palette__color--custom-white {
+  background: #E7E8F1;
+}
+
+.color-palette__color--custom-pink {
+  background: #EC88B3;
+}
+
+.color-palette__color--custom-orange {
+  background: #EF865F;
 }
 
 .color-palette__reset {
