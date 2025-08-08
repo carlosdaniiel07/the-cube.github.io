@@ -173,6 +173,12 @@ class Game {
     const selectedColor = this.colorPalette.getSelectedColor();
     if (!selectedColor) return;
 
+    // Se "Fill all faces" estiver marcado, pinta todas as faces
+    if (this.colorPalette.isFillAllFacesEnabled()) {
+      this.colorPalette.fillAllFaces(selectedColor);
+      return;
+    }
+
     const clickEvent = event.touches
       ? event.touches[0] || event.changedTouches[0]
       : event;

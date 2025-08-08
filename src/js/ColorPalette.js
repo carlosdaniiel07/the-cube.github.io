@@ -8,7 +8,8 @@ class ColorPalette {
     this.dom = {
       container: document.querySelector('.ui__color-palette'),
       colors: document.querySelectorAll('.color-palette__color'),
-      resetBtn: document.querySelector('.color-palette__reset-btn')
+      resetBtn: document.querySelector('.color-palette__reset-btn'),
+      fillAllCheckbox: document.querySelector('.color-palette__checkbox')
     };
 
     this.bindEvents();
@@ -64,6 +65,32 @@ class ColorPalette {
 
   getSelectedColor() {
     return this.selectedColor;
+  }
+
+  isFillAllFacesEnabled() {
+    return this.dom.fillAllCheckbox && this.dom.fillAllCheckbox.checked;
+  }
+
+  fillAllFaces(colorKey) {
+    // Obtém a cor selecionada da paleta (usando as cores padrão do tema)
+    const defaultColors = this.game.themes.defaults[this.game.themes.theme];
+    const selectedColorHex = defaultColors[colorKey];
+
+    if (!selectedColorHex) return;
+
+    // Aplica a cor selecionada a todas as faces
+    const faces = ['U', 'D', 'F', 'R', 'B', 'L'];
+    faces.forEach(faceName => {
+      // Atualiza a cor no tema
+      this.game.themes.colors[this.game.themes.theme][faceName] = selectedColorHex;
+    });
+    
+    // Aplica a cor a todas as edges do cubo
+    this.game.cube.edges.forEach(edge => {
+      if (faces.includes(edge.name)) {
+        edge.material.color.setHex(selectedColorHex);
+      }
+    });
   }
 
   reset() {
